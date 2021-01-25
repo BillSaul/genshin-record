@@ -3,10 +3,10 @@
         <div class="Navigation_div">
             <Navigation />
         </div>
-        <div class="Count_div" v-if="flag">
+        <div class="Count_div" v-show="flag">
             <Count />
         </div>
-        <div class="Data_div" v-if="flag">
+        <div class="Data_div" v-show="flag">
             <Data />
         </div>
     </div>
@@ -31,8 +31,9 @@ export default {
     // 监听tab切换
     watch: {
         "$store.state.tab"() {
-            if (this.$store.state.tab === "4") this.flag = 0;
-            else this.flag = 1;
+            this.$store.state.tab === "history_tab"
+                ? (this.flag = 0)
+                : (this.flag = 1);
         },
     },
 };

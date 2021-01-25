@@ -32,19 +32,19 @@ export default {
         // 绑定值改变事件
         handleChange(value) {
             // 角色up池
-            if (this.$store.state.tab === "1") {
+            if (this.$store.state.tab === "role_tab") {
                 this.$store.commit("change_roleThis_num", value);
                 this.$store.commit("change_roleNum", value);
                 this.DataServer.updata_role_data();
             }
             // 武器up池
-            if (this.$store.state.tab === "2") {
+            if (this.$store.state.tab === "arms_tab") {
                 this.$store.commit("change_armsThis_num", value);
                 this.$store.commit("change_armsNum", value);
                 this.DataServer.updata_arms_data();
             }
             // 常驻池
-            if (this.$store.state.tab === "3") {
+            if (this.$store.state.tab === "permanent_tab") {
                 this.$store.commit("change_permanentNum", value);
                 this.DataServer.updata_permanent_data();
             }
@@ -52,25 +52,25 @@ export default {
 
         // 重置事件
         confirmReset() {
-            if (this.$store.state.tab === "1") {
+            if (this.$store.state.tab === "role_tab") {
                 this.$store.commit("change_roleNum", "0");
 
-                if (this.$store.state.roleInfo === "小保底")
-                    this.$store.commit("change_roleinfo", "大保底");
-                else this.$store.commit("change_roleinfo", "小保底");
+                this.$store.state.roleInfo === "小"
+                    ? this.$store.commit("change_roleinfo", "大")
+                    : this.$store.commit("change_roleinfo", "小");
 
                 this.DataServer.updata_role_data();
             }
-            if (this.$store.state.tab === "2") {
+            if (this.$store.state.tab === "arms_tab") {
                 this.$store.commit("change_armsNum", "0");
 
-                if (this.$store.state.armsInfo === "小保底")
-                    this.$store.commit("change_armsinfo", "大保底");
-                else this.$store.commit("change_armsinfo", "小保底");
+                this.$store.state.armsInfo === "小"
+                    ? this.$store.commit("change_armsinfo", "大")
+                    : this.$store.commit("change_armsinfo", "小");
 
                 this.DataServer.updata_arms_data();
             }
-            if (this.$store.state.tab === "3") {
+            if (this.$store.state.tab === "permanent_tab") {
                 this.$store.commit("change_permanentNum", "0");
 
                 this.DataServer.updata_permanent_data();
@@ -78,13 +78,13 @@ export default {
         },
 
         change() {
-            if (this.$store.state.tab === "1") {
+            if (this.$store.state.tab === "role_tab") {
                 this.num = this.$store.state.roleNum;
             }
-            if (this.$store.state.tab === "2") {
+            if (this.$store.state.tab === "arms_tab") {
                 this.num = this.$store.state.armsNum;
             }
-            if (this.$store.state.tab === "3") {
+            if (this.$store.state.tab === "permanent_tab") {
                 this.num = this.$store.state.permanentNum;
             }
         },

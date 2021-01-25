@@ -1,13 +1,5 @@
 <template>
     <div>
-        <!-- <li v-for="item in items" :key="item.date" class="history_li">
-            <div class="li_div">
-                <h4>{{ item.date }}</h4>
-                <img :src="item.path1" alt class="history_img1" />
-                <img :src="item.path2" alt class="history_img2" />
-            </div>
-        </li> -->
-
         <el-collapse v-model="activeName" accordion>
             <li v-for="item in items" :key="item.date" class="history_li">
                 <el-collapse-item :title="'时间：'+item.date" :name="item.date">

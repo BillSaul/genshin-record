@@ -10,9 +10,12 @@ let store = new Vuex.Store({
         armsNum: '0',
         armsThis_num: '0',
         permanentNum: '0',
-        roleInfo: '小保底',
-        armsInfo: '小保底',
-        tab: '1',
+        roleInfo: '小',
+        armsInfo: '小',
+        roleGet: '',
+        armsGet: '',
+        permanentGet: '',
+        tab: 'role_tab',
         password: '0',
     },
     mutations: {
@@ -46,8 +49,17 @@ let store = new Vuex.Store({
         change_armsinfo(state, string) {
             state.armsInfo = string
         },
-        change_password(state, string){
+        change_password(state, string) {
             state.password = string
+        },
+        change_roleGet(state, string) {
+            state.roleGet = string
+        },
+        change_armsGet(state, string) {
+            state.armsGet = string
+        },
+        change_permanentGet(state, string) {
+            state.permanentGet = string
         },
     },
 })

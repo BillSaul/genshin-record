@@ -1,35 +1,37 @@
 <template>
     <el-tabs v-model="activeName" @tab-click="handleClick" type="border-card">
-        <el-tab-pane label="角色UP" name="1">
+        <el-tab-pane label="角色UP" name="role_tab">
             <div class="img_div">
                 <img class="img_nav" src="../assets/cover-img/甘雨.jpeg" alt />
             </div>
         </el-tab-pane>
-        <el-tab-pane label="武器UP" name="2">
+        <el-tab-pane label="武器UP" name="arms_tab">
             <div class="img_div">
                 <img class="img_nav" src="../assets/arms-img/阿莫斯之弓.jpeg" alt />
             </div>
         </el-tab-pane>
-        <el-tab-pane label="常驻" name="3">
+        <el-tab-pane label="常驻" name="permanent_tab">
             <div class="img_div">
                 <img class="img_nav" src="../assets/常驻.png" alt />
             </div>
         </el-tab-pane>
-        <el-tab-pane label="历史up" name="4"><History/></el-tab-pane>
+        <el-tab-pane label="历史up" name="history_tab">
+            <History />
+        </el-tab-pane>
     </el-tabs>
 </template>
 
 <script>
-import History from './History.vue'
+import History from "./History.vue";
 
 export default {
     name: "Navigation",
-    components:{
-        History
+    components: {
+        History,
     },
     data() {
         return {
-            activeName: "1",
+            activeName: "role_tab",
         };
     },
     methods: {

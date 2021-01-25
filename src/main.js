@@ -18,7 +18,7 @@ Vue.prototype.sha1 = sha1
 
 new Vue({
     beforeCreate() {
-        this.$prompt('请输入用户ID', {
+        this.$prompt('请输入用户密码', {
             confirmButtonText: '确定',
             cancelButtonText: '取消',
             customClass: 'msgbox',
