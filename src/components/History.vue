@@ -18,11 +18,11 @@ export default {
     data() {
         return {
             items: [
-                // {
-                //     path1: require("../assets/cover-img/甘雨.jpeg"),
-                //     path2: require("../assets/arms-img/阿莫斯之弓.jpeg"),
-                //     date: "2021/01/12 ~ 2021/02/02",
-                // },
+                {
+                    path1: require("../assets/cover-img/甘雨.jpeg"),
+                    path2: require("../assets/arms-img/阿莫斯之弓.jpeg"),
+                    date: "2021/01/12 ~ 2021/02/02",
+                },
                 {
                     path1: require("../assets/cover-img/阿贝多.jpeg"),
                     path2: require("../assets/arms-img/斫峰之刃.jpg"),
@@ -49,7 +49,7 @@ export default {
                     date: "2020/09/28 ~ 2020/10/18",
                 },
             ],
-            activeName: "2020/12/23 ~ 2021/01/12",
+            activeName: "2021/01/12 ~ 2021/02/02",
         };
     },
 };
