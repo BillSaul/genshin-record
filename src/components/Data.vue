@@ -2,7 +2,7 @@
     <div>
         <p>
             <span v-if="flag">本期卡池已抽{{num1}}次，</span>
-            <span v-if="flag">{{info}}</span>保底还有{{90-num2}}次
+            <span v-if="flag">{{info}}</span>保底还有{{this.$store.state.tab === "arms_tab" ? 80-num2 : 90-num2}}次
         </p>
         <el-progress :percentage="num3"></el-progress>
         <div>
