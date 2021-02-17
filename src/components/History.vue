@@ -4,8 +4,8 @@
             <li v-for="item in items" :key="item.date" class="history_li">
                 <el-collapse-item :title="'时间：'+item.date" :name="item.date">
                     <div class="li_div">
-                        <img :src="item.path1" alt class="history_img1" />
-                        <img :src="item.path2" alt class="history_img2" />
+                        <img :src="item.path1" v-if="item.path1!=null" alt class="history_img1" />
+                        <img :src="item.path2" v-if="item.path2!=null" alt class="history_img2" />
                     </div>
                 </el-collapse-item>
             </li>
@@ -18,6 +18,16 @@ export default {
     data() {
         return {
             items: [
+                // {
+                //     path1: require("../assets/cover-img/刻晴.png"),
+                //     path2: null,
+                //     date: "2021/02/17 ~ 2021/03/02",
+                // },
+                {
+                    path1: require("../assets/cover-img/魈.png"),
+                    path2: null,
+                    date: "2021/02/03 ~ 2021/02/17",
+                },
                 {
                     path1: require("../assets/cover-img/甘雨.jpeg"),
                     path2: require("../assets/arms-img/阿莫斯之弓.jpeg"),
@@ -49,7 +59,7 @@ export default {
                     date: "2020/09/28 ~ 2020/10/18",
                 },
             ],
-            activeName: "2021/01/12 ~ 2021/02/02",
+            activeName: "2021/02/03 ~ 2021/02/17",
         };
     },
 };
@@ -60,12 +70,15 @@ export default {
     width: 100%;
     height: auto;
     border-radius: 10px;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
 }
 .history_img2 {
     width: 100%;
     height: auto;
     border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
 }
 .history_li {
     list-style: none;
@@ -75,7 +88,7 @@ export default {
     display: flex;
     align-items: center;
     flex-direction: column;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04); */
     border-radius: 10px;
 }
 </style>
