@@ -24,6 +24,11 @@ export default {
                 //     date: "2021/02/17 ~ 2021/03/02",
                 // },
                 {
+                    path1: null,
+                    path2: require("../assets/arms-img/和璞鸢.png"),
+                    date: "2021/02/03 ~ 2021/02/23",
+                },
+                {
                     path1: require("../assets/cover-img/魈.png"),
                     path2: null,
                     date: "2021/02/03 ~ 2021/02/17",
@@ -59,7 +64,7 @@ export default {
                     date: "2020/09/28 ~ 2020/10/18",
                 },
             ],
-            activeName: "2021/02/03 ~ 2021/02/17",
+            activeName: "2021/02/03 ~ 2021/02/23",
         };
     },
 };

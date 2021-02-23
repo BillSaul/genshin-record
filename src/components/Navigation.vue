@@ -7,7 +7,7 @@
         </el-tab-pane>
         <el-tab-pane label="武器UP" name="arms_tab">
             <div class="img_div">
-                <img class="img_nav" src="../assets/arms-img/和璞鸢.png" alt />
+                <img class="img_nav" src="../assets/arms-img/护摩之杖.png" alt />
             </div>
         </el-tab-pane>
         <el-tab-pane label="常驻" name="permanent_tab">

@@ -5,7 +5,7 @@
             v-model="num"
             @change="handleChange"
             :min="0"
-            :max="90"
+            :max="this.$store.state.tab === 'arms_tab' ? 80 : 90"
             label="抽奖次数"
             size="small"
         ></el-input-number>
