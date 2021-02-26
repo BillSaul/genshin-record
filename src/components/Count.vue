@@ -10,10 +10,12 @@
             size="small"
         ></el-input-number>
         <el-popconfirm
-            title="确定重置次数吗？"
-            confirm-button-text="好的"
-            cancel-button-text="手滑了"
+            title=" 是否为本期up五星？"
+            confirm-button-text="是"
+            cancel-button-text="否"
+            cancel-button-type="Primary"
             @confirm="confirmReset"
+            @cancel="cancelReset"
         >
             <el-button slot="reference" type="primary" size="small">重置次数</el-button>
         </el-popconfirm>
@@ -29,6 +31,24 @@ export default {
         };
     },
     methods: {
+        infoChange(string) {
+            if (this.$store.state.tab === "role_tab") {
+                this.$store.commit("change_roleNum", "0");
+                this.$store.commit("change_roleinfo", string);
+                this.DataServer.updata_role_data();
+            }
+            if (this.$store.state.tab === "arms_tab") {
+                this.$store.commit("change_armsNum", "0");
+                this.$store.commit("change_armsinfo", string);
+                this.DataServer.updata_arms_data();
+            }
+            if (this.$store.state.tab === "permanent_tab") {
+                this.$store.commit("change_permanentNum", "0");
+
+                this.DataServer.updata_permanent_data();
+            }
+        },
+
         // 绑定值改变事件
         handleChange(value) {
             // 角色up池
@@ -52,29 +72,10 @@ export default {
 
         // 重置事件
         confirmReset() {
-            if (this.$store.state.tab === "role_tab") {
-                this.$store.commit("change_roleNum", "0");
-
-                this.$store.state.roleInfo === "小"
-                    ? this.$store.commit("change_roleinfo", "大")
-                    : this.$store.commit("change_roleinfo", "小");
-
-                this.DataServer.updata_role_data();
-            }
-            if (this.$store.state.tab === "arms_tab") {
-                this.$store.commit("change_armsNum", "0");
-
-                this.$store.state.armsInfo === "小"
-                    ? this.$store.commit("change_armsinfo", "大")
-                    : this.$store.commit("change_armsinfo", "小");
-
-                this.DataServer.updata_arms_data();
-            }
-            if (this.$store.state.tab === "permanent_tab") {
-                this.$store.commit("change_permanentNum", "0");
-
-                this.DataServer.updata_permanent_data();
-            }
+            this.infoChange("小");
+        },
+        cancelReset() {
+            this.infoChange("大");
         },
 
         change() {

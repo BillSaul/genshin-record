@@ -75,7 +75,6 @@ export default {
     width: 100%;
     height: auto;
     border-radius: 10px;
-    /* margin-bottom: 10px; */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
 }
 .history_img2 {
@@ -93,7 +92,12 @@ export default {
     display: flex;
     align-items: center;
     flex-direction: column;
-    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04); */
     border-radius: 10px;
+}
+.el-collapse-item__header {
+    background-color: rgb(245, 245, 245);
+}
+.el-collapse-item__wrap {
+    background-color: rgb(245, 245, 245);
 }
 </style>
