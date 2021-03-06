@@ -10,12 +10,23 @@
             size="small"
         ></el-input-number>
         <el-popconfirm
-            title=" 是否为本期up五星？"
+            title="是否为本期up五星？"
             confirm-button-text="是"
             cancel-button-text="否"
             cancel-button-type="Primary"
             @confirm="confirmReset"
             @cancel="cancelReset"
+            v-if="this.$store.state.tab !== 'permanent_tab'"
+        >
+            <el-button slot="reference" type="primary" size="small">重置次数</el-button>
+        </el-popconfirm>
+        <el-popconfirm
+            title="确定重置次数吗？"
+            confirm-button-text="是"
+            cancel-button-text="否"
+            cancel-button-type="Primary"
+            @confirm="confirmReset"
+            v-if="this.$store.state.tab === 'permanent_tab'"
         >
             <el-button slot="reference" type="primary" size="small">重置次数</el-button>
         </el-popconfirm>

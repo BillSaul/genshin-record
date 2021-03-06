@@ -11,7 +11,7 @@
                 v-if="this.$store.state.password === 'true' && this.list[0] !== 'null'"
                 class="data"
             >
-                <div v-for="name in list" :key="name" class="img">
+                <div v-for="(name,index) in list" :key="index" class="img">
                     <img :src="require('../assets/icon-img/'+ name + '.png')" alt class="img_data" />
                     <span class="name_data">{{ name }}</span>
                 </div>
