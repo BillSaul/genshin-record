@@ -2,12 +2,12 @@
     <el-tabs v-model="activeName" @tab-click="handleClick" type="border-card">
         <el-tab-pane label="角色UP" name="role_tab">
             <div class="img_div">
-                <img class="img_nav" src="../assets/cover-img/可莉1.png" alt />
+                <img class="img_nav" src="../assets/cover-img/枫原万叶.png" alt />
             </div>
         </el-tab-pane>
         <el-tab-pane label="武器UP" name="arms_tab">
             <div class="img_div">
-                <img class="img_nav" src="../assets/arms-img/四风原典1.png" alt />
+                <img class="img_nav" src="../assets/arms-img/苍古自由之誓.png" alt />
             </div>
         </el-tab-pane>
         <el-tab-pane label="常驻" name="permanent_tab">

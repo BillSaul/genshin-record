@@ -19,10 +19,15 @@ export default {
         return {
             items: [
                 // {
-                //     path1: require("../assets/cover-img/可莉1.png"),
-                //     path2: require("../assets/arms-img/四风原典1.png"),
-                //     date: "2021/06/09 ~ 2021/06/29",
+                //     path1: require("../assets/cover-img/枫原万叶.png"),
+                //     path2: require("../assets/arms-img/苍古自由之誓.png"),
+                //     date: "2021/06/29 ~ 2021/07/20",
                 // },
+                {
+                    path1: require("../assets/cover-img/可莉1.png"),
+                    path2: require("../assets/arms-img/四风原典1.png"),
+                    date: "2021/06/09 ~ 2021/06/29",
+                },
                 {
                     path1: require("../assets/cover-img/优菈.jpg"),
                     path2: require("../assets/arms-img/松籁响起之时.jpg"),
@@ -94,7 +99,7 @@ export default {
                     date: "2020/09/28 ~ 2020/10/18",
                 },
             ],
-            activeName: "2021/05/18 ~ 2021/06/08",
+            activeName: "2021/06/09 ~ 2021/06/29",
         };
     },
 };
