@@ -19,10 +19,20 @@ export default {
         return {
             items: [
                 // {
-                //     path1: require("../assets/cover-img/雷电将军.jpg"),
-                //     path2: require("../assets/arms-img/薙草之稻光.jpg"),
-                //     date: "2021/09/01 ~ 2021/09/21",
+                //     path1: require("../assets/cover-img/达达利亚2.jpg"),
+                //     path2: require("../assets/arms-img/冬极白星.jpg"),
+                //     date: "2021/10/13 ~ 2021/11/02",
                 // },
+                {
+                    path1: require("../assets/cover-img/珊瑚宫心海.jpg"),
+                    path2: require("../assets/arms-img/不灭月华.jpg"),
+                    date: "2021/09/21 ~ 2021/10/12",
+                },
+                {
+                    path1: require("../assets/cover-img/雷电将军.jpg"),
+                    path2: require("../assets/arms-img/薙草之稻光.jpg"),
+                    date: "2021/09/01 ~ 2021/09/21",
+                },
                 {
                     path1: require("../assets/cover-img/宵宫.jpg"),
                     path2: require("../assets/arms-img/飞雷之弦振.jpg"),
@@ -114,7 +124,7 @@ export default {
                     date: "2020/09/28 ~ 2020/10/18",
                 },
             ],
-            activeName: "2021/08/10 ~ 2021/08/31",
+            activeName: "2021/09/21 ~ 2021/10/12",
         };
     },
 };
