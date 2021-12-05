@@ -24,3 +24,4 @@ pnpm-debug.log*
 src/api/LeanCloud.js
 src/api/DataServer.js
 push.bat
+push.sh
