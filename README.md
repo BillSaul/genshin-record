@@ -1,4 +1,4 @@
-[国内文档地址](https://billsaul.gitee.io/pages/1922ab/)
+[国内文档地址](https://www.meowpass.com/pages/1922ab/)
 
 **游戏现在能查询6个月以内的抽奖记录了(以前是1个月)，所以打算调整一下这个项目的功能，敬请期待...!**
 
